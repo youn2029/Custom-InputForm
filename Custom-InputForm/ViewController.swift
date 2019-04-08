@@ -116,6 +116,12 @@ class ViewController: UIViewController {
         
         self.view.addSubview(self.txtInterval)
         
+        //////////////////////////////////////////////////////
+        
+        // 전송 버튼 : 네비게이션 아이템에 추가, submit 메소드에 연결
+        let submitBtn = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(submit(_:)))
+        self.navigationItem.rightBarButtonItem = submitBtn
+        
     }
     
     // 스위치와 상호반응할 액션 메소드
@@ -126,6 +132,18 @@ class ViewController: UIViewController {
     // 스테퍼와 상호반응할 액션 메소드
     @objc func stepperOnClick(_ sender: UIStepper){
         self.txtInterval.text = "\(Int(sender.value))초 마다"
+    }
+    
+    // 전송 버튼과 상호반응할 액션 메소드
+    @objc func submit(_ sender: Any){
+        
+        let rvc = ReadViewController()
+        rvc.pEmail = self.paramEmail.text
+        rvc.pUpdate = self.paramUpdate.isOn
+        rvc.pInterval = self.paramInterval.value
+        
+        self.navigationController?.pushViewController(rvc, animated: true)
+        
     }
     
 

@@ -13,6 +13,7 @@
 		4EFFF295225B122B00A601C7 /* Custom_InputForm.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EFFF293225B122B00A601C7 /* Custom_InputForm.xcdatamodeld */; };
 		4EFFF297225B122C00A601C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EFFF296225B122C00A601C7 /* Assets.xcassets */; };
 		4EFFF29A225B122C00A601C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EFFF298225B122C00A601C7 /* LaunchScreen.storyboard */; };
+		4EFFF2A2225B385800A601C7 /* ReadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EFFF2A1225B385800A601C7 /* ReadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		4EFFF296225B122C00A601C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4EFFF299225B122C00A601C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4EFFF29B225B122C00A601C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EFFF2A1225B385800A601C7 /* ReadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				4EFFF28C225B122B00A601C7 /* AppDelegate.swift */,
 				4EFFF28E225B122B00A601C7 /* ViewController.swift */,
+				4EFFF2A1225B385800A601C7 /* ReadViewController.swift */,
 				4EFFF290225B122B00A601C7 /* Main.storyboard */,
 				4EFFF296225B122C00A601C7 /* Assets.xcassets */,
 				4EFFF298225B122C00A601C7 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				4EFFF28F225B122B00A601C7 /* ViewController.swift in Sources */,
 				4EFFF295225B122B00A601C7 /* Custom_InputForm.xcdatamodeld in Sources */,
+				4EFFF2A2225B385800A601C7 /* ReadViewController.swift in Sources */,
 				4EFFF28D225B122B00A601C7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
