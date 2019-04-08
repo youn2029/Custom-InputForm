@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         
         // 자동갱신 Label
         let lblUpdate = UILabel()
-        lblUpdate.frame = CGRect(x: 30, y: 150, width: 100, height: 30)
+        lblUpdate.frame = CGRect(x: lblEmail.frame.origin.x, y: 150, width: 100, height: 30)
         lblUpdate.text = "자동 갱신"
         lblUpdate.font = UIFont.systemFont(ofSize: 14)
         
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         // 갱신주기 Label
         let lblInterval = UILabel()
-        lblInterval.frame = CGRect(x: 30, y: 200, width: 100, height: 30)
+        lblInterval.frame = CGRect(x: lblEmail.frame.origin.x, y: 200, width: 100, height: 30)
         lblInterval.text = "갱신주기"
         lblInterval.font = UIFont.systemFont(ofSize: 14)
         
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         
         // 이메일 텍스트 필드
         self.paramEmail = UITextField()
-        self.paramEmail.frame = CGRect(x: 120, y: 100, width: 220, height: 30)
+        self.paramEmail.frame = CGRect(x: 120, y: lblEmail.frame.origin.y, width: 220, height: 30)
         self.paramEmail.borderStyle = UITextField.BorderStyle.roundedRect
         self.paramEmail.font = UIFont.systemFont(ofSize: 13)
         self.paramEmail.placeholder = "이메일을 입력해주세요"
@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         
         // 자동갱신 스위치
         self.paramUpdate = UISwitch()
-        self.paramUpdate.frame = CGRect(x: 120, y: 150, width: 50, height: 30)
+        self.paramUpdate.frame = CGRect(x: self.paramEmail.frame.origin.x, y: lblUpdate.frame.origin.y, width: 50, height: 30)
         self.paramUpdate.setOn(true, animated: true)        // 기본값 설정
         
         self.view.addSubview(self.paramUpdate)
@@ -82,7 +82,7 @@ class ViewController: UIViewController {
         
         // 갱신주기 스테퍼
         self.paramInterval = UIStepper()
-        self.paramInterval.frame = CGRect(x: 120, y: 200, width: 50, height: 30)
+        self.paramInterval.frame = CGRect(x: self.paramEmail.frame.origin.x, y: lblInterval.frame.origin.y, width: 50, height: 30)
         self.paramInterval.minimumValue = 0         // 최소값 설정
         self.paramInterval.maximumValue = 100       // 최대값 설정
         self.paramInterval.stepValue = 1            // 스테퍼의 값 변경 단위
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
         
         // 자동갱신 텍스트
         self.txtUpdate = UILabel()
-        self.txtUpdate.frame = CGRect(x: 250, y: 150, width: 100, height: 30)
+        self.txtUpdate.frame = CGRect(x: 250, y: self.paramUpdate.frame.origin.y, width: 100, height: 30)
         self.txtUpdate.font = UIFont.systemFont(ofSize: 12)
         self.txtUpdate.textColor = UIColor.red
         self.txtUpdate.text = "갱신함"
@@ -109,7 +109,7 @@ class ViewController: UIViewController {
         // 갱신주기 텍스트
         
         self.txtInterval = UILabel()
-        self.txtInterval.frame = CGRect(x: 250, y: 200, width: 50, height: 30)
+        self.txtInterval.frame = CGRect(x: self.txtUpdate.frame.origin.x, y: self.paramInterval.frame.origin.y, width: 50, height: 30)
         self.txtInterval.font = UIFont.systemFont(ofSize: 12)
         self.txtInterval.textColor = .red
         self.txtInterval.text = "0초 마다"

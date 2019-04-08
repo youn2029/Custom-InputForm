@@ -30,8 +30,8 @@ class ReadViewController: UIViewController {
         
         // 위치 & 크기 설정
         lblEmail.frame = CGRect(x: 50, y: 100, width: 300, height: 30)
-        lblUpdate.frame = CGRect(x: 50, y: 150, width: 300, height: 30)
-        lblInterval.frame = CGRect(x: 50, y: 200, width: 300, height: 30)
+        lblUpdate.frame = CGRect(x: lblEmail.frame.origin.x, y: 150, width: 300, height: 30)
+        lblInterval.frame = CGRect(x: lblEmail.frame.origin.x, y: 200, width: 300, height: 30)
         
         // 텍스트 설정
         lblEmail.text = self.pEmail == "" ? "이메일이 없습니다." : "이메일 : \(self.pEmail!)"
